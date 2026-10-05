@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Educated Voter AL — Alabama voter information and voter assistance, powered by Educated Voters PAC.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Educated Voter AL</title>
+</head>
+<body id="top">
+<header class="hero">
+  <div class="brand">
+    <div class="mark" aria-hidden="true">✓</div>
+    <div>
+      <p class="eyebrow">POWERED BY EDUCATED VOTERS PAC</p>
+      <h1>Educated Voter AL</h1>
+      <p class="tagline">Get informed. Get prepared. Get vote ready.</p>
+    </div>
+  </div>
+  <div class="countdown" id="countdown" aria-live="polite"></div>
+</header>
+
+<main>
+  <section class="alert-card">
+    <strong>2026 General Election:</strong> Tuesday, November 3, 2026
+    <span>Use this hub to reach official Alabama and county election resources.</span>
+  </section>
+
+  <section class="primary-actions" aria-label="Top voter actions">
+    <a class="action primary" href="https://myinfo.alabamavotes.gov/voterview" target="_blank" rel="noopener">
+      <span class="icon">✓</span><span><b>Check My Registration</b><small>Official Alabama voter-information portal</small></span>
+    </a>
+    <a class="action" href="https://myinfo.alabamavotes.gov/voterview" target="_blank" rel="noopener">
+      <span class="icon">⌖</span><span><b>Find My Polling Place</b><small>Look up your official voting location</small></span>
+    </a>
+    <a class="action" href="https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting" target="_blank" rel="noopener">
+      <span class="icon">✉</span><span><b>Absentee Voting</b><small>Rules, applications, deadlines and instructions</small></span>
+    </a>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow gold">LOCAL ELECTION INFO</p>
+    <h2>Choose your county</h2>
+    <label class="sr-only" for="countySelect">Alabama county</label>
+    <select id="countySelect"></select>
+    <div id="countyCard" class="county-card" aria-live="polite"></div>
+  </section>
+
+  <section class="panel">
+    <p class="eyebrow gold">DATES TO REMEMBER</p>
+    <h2>2026 General Election</h2>
+    <div class="timeline">
+      <div><time>Oct 19</time><span>Voter registration deadline for the November 3 General Election.</span></div>
+      <div><time>Oct 27</time><span>Last day for a mail-in absentee ballot application to be received.</span></div>
+      <div><time>Oct 29</time><span>Last day to apply for an absentee ballot in person.</span></div>
+      <div><time>Nov 2</time><span>Last day to hand-deliver an absentee ballot to the absentee election manager.</span></div>
+      <div><time>Nov 3</time><span><b>Election Day.</b> Absentee ballots returned by mail must be received by noon, subject to the rules for UOCAVA voters.</span></div>
+    </div>
+    <a class="text-link" href="https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026" target="_blank" rel="noopener">Verify 2026 election information on AlabamaVotes.gov →</a>
+  </section>
+
+  <section class="grid">
+    <article class="tile">
+      <span class="tile-icon" aria-hidden="true">🪪</span><h3>Photo Voter ID</h3>
+      <p>Review Alabama's official voter-ID information before Election Day.</p>
+      <a href="https://www.sos.alabama.gov/alabama-votes/voter/voter-id" target="_blank" rel="noopener">Official ID information →</a>
+    </article>
+
+    <article class="tile">
+      <span class="tile-icon" aria-hidden="true">🗳️</span><h3>Sample Ballot</h3>
+      <p>Open Alabama's official 2026 election information page to reach General Election sample ballots.</p>
+      <a href="https://www.sos.alabama.gov/alabama-votes/voter/election-information/2026" target="_blank" rel="noopener">2026 election information →</a>
+    </article>
+
+    <article class="tile">
+      <span class="tile-icon" aria-hidden="true">⚖️</span><h3>Having Trouble Voting?</h3>
+      <p>Contact election officials or a voter-protection hotline for assistance.</p>
+      <div class="button-row">
+        <a class="mini" href="tel:+13342427200">Alabama Elections: (334) 242-7200</a>
+        <a class="mini" href="tel:+18666878683">Election Protection: 866-OUR-VOTE</a>
+      </div>
+    </article>
+
+    <article class="tile">
+      <span class="tile-icon" aria-hidden="true">🚐</span><h3>Need a Ride?</h3>
+      <p>The transportation module is being prepared for caravan partners. It will collect only information needed to coordinate a ride.</p>
+      <button class="mini button" id="rideBtn" type="button">How ride requests will work</button>
+    </article>
+
+    <article class="tile">
+      <span class="tile-icon" aria-hidden="true">✅</span><h3>My Vote Plan</h3>
+      <p>Use this private checklist on your own device. Your selections stay in your browser.</p>
+      <div class="checklist">
+        <label><input type="checkbox" data-plan="registration"> Registration checked</label>
+        <label><input type="checkbox" data-plan="polling"> Polling place checked</label>
+        <label><input type="checkbox" data-plan="id"> Photo ID ready</label>
+        <label><input type="checkbox" data-plan="ballot"> Sample ballot reviewed</label>
+        <label><input type="checkbox" data-plan="ride"> Transportation planned</label>
+      </div>
+    </article>
+
+    <article class="tile">
+      <span class="tile-icon" aria-hidden="true">📘</span><h3>Official Alabama Voter Guide</h3>
+      <p>Review statewide election dates, voting procedures, and voter resources from the Alabama Secretary of State.</p>
+      <a href="https://www.sos.alabama.gov/sites/default/files/election-2026/2026-VoterGuide.pdf" target="_blank" rel="noopener">Open the 2026 Voter Guide →</a>
+    </article>
+  </section>
+
+  <section class="panel privacy">
+    <p class="eyebrow gold">YOUR PRIVACY</p>
+    <h2>Your voter lookup stays with the official state system.</h2>
+    <p>Educated Voter AL does not ask you to enter voter-registration credentials into this app. Registration and polling-place searches open the official Alabama voter-information system.</p>
+  </section>
+
+  <section class="panel install">
+    <div>
+      <p class="eyebrow gold">KEEP IT ON YOUR PHONE</p>
+      <h2>Add Educated Voter AL to your Home Screen</h2>
+      <p>No app-store download is required for this web-app version.</p>
+    </div>
+    <button id="installBtn" class="install-btn" hidden type="button">Install App</button>
+  </section>
+</main>
+
+<nav class="bottom-nav" aria-label="Bottom navigation">
+  <a href="#top">Home</a>
+  <a href="https://myinfo.alabamavotes.gov/voterview" target="_blank" rel="noopener">My Vote</a>
+  <a href="#countySelect">County</a>
+  <a href="tel:+18666878683">Help</a>
+</nav>
+
+<footer>
+  <strong>Educated Voter AL</strong>
+  <p>Powered by Educated Voters PAC</p>
+  <p class="fine">Educated Voter AL is a voter-information hub and is not the Alabama Secretary of State or a county election office. Official election links open the responsible government source.</p>
+  <p class="fine">Election information can change. Verify time-sensitive information with the Alabama Secretary of State or your county election officials before acting.</p>
+</footer>
+
+<dialog id="rideDialog">
+  <button class="close" aria-label="Close" type="button" onclick="document.getElementById('rideDialog').close()">×</button>
+  <h2>Ride-to-the-Polls Module</h2>
+  <p>The production version can connect this button to a secure ride-request form or dispatch partner. It should collect only the information necessary to provide transportation and should never ask how someone intends to vote.</p>
+  <p><b>Recommended fields:</b> first name, phone, pickup ZIP/area, requested time window, mobility/accessibility accommodation, and consent to be contacted.</p>
+</dialog>
+
+<script src="./app.js"></script>
+</body>
+</html>
