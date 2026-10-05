@@ -1,0 +1,11 @@
+{
+  "name":"Educated Voter AL",
+  "short_name":"Educated Voter",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#fffaf0",
+  "theme_color":"#101010",
+  "description":"Alabama voter information hub powered by Educated Voters PAC.",
+  "icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
