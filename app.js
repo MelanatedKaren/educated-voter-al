@@ -43,8 +43,6 @@ function updateCountdown(){
 }
 updateCountdown();
 
-document.getElementById("rideBtn").addEventListener("click",()=>document.getElementById("rideDialog").showModal());
-
 document.querySelectorAll("[data-plan]").forEach(box=>{
   const key="ev-plan-"+box.dataset.plan;
   box.checked=localStorage.getItem(key)==="1";
