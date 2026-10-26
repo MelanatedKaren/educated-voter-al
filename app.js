@@ -97,9 +97,14 @@ if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.ser
       links:[["Alabama absentee and disability options","https://www.sos.alabama.gov/alabama-votes/voter/absentee-voting"],["Find election officials", "https://www.sos.alabama.gov/city-county-lookup"],["Request accessible transportation (subject to availability)","https://form.jotform.com/262826321453051"]]
     },
     ride:{
-      title:"REVUP to the Polls — free ride request",
-      body:"Need transportation to vote on Tuesday, November 3? Open the separate REVUP to the Polls Jotform. This is a REQUEST, not a confirmed ride. Service focuses on Montgomery and surrounding Black Belt communities, and accessibility needs can be noted. You do not have to fill out this form to use the rest of Educated Voters.",
-      links:[["Open REVUP free ride Jotform","https://form.jotform.com/262826321453051"],["Check my polling place first",lookup]]
+      title:"Free Election Day rides — November 3, 2026",
+      body:"REV UP Alabama and WHOM IT CONCERNS, INC. serve Montgomery and Alabama’s Black Belt, 7 AM–7 PM. Schedule with Karen Jones: 334-293-1982 or 334-544-7963, or use the REV UP request form. Lift Our Vote also accepts ride requests at 256-701-4182 and LiftOurVote.com. Confirm coverage, pickup and accessibility needs with your provider. A request is not a confirmed ride.",
+      links:[["Call Karen Jones: 334-293-1982","tel:+13342931982"],["Call Karen Jones: 334-544-7963","tel:+13345447963"],["Open REV UP ride request form","https://form.jotform.com/262826321453051"],["Call Lift Our Vote: 256-701-4182","tel:+12567014182"],["Lift Our Vote ride requests","https://liftourvote.com/"]]
+    },
+    volunteer:{
+      title:"Volunteer or help offset fuel costs",
+      body:"REV UP Alabama and WHOM IT CONCERNS, INC. need volunteers throughout the Black Belt for November 3, 2026. Contact Karen Jones at 334-293-1982 or 334-544-7963. Optional fuel donations: Cash App $whomitconcernsinc. Rides are free. Lift Our Vote needs call takers, drivers and poll advocates for nonpartisan voter support. Select Volunteer with Us at LiftOurVote.com. Training is provided; the flyer lists Sundays at 5:00 PM. Confirm the time zone and joining details with the organizer.",
+      links:[["Volunteer with Karen: 334-293-1982","tel:+13342931982"],["Volunteer with Karen: 334-544-7963","tel:+13345447963"],["Volunteer with Lift Our Vote","https://liftourvote.com/"]]
     },
     help:{
       title:"Help with voting questions or problems",
@@ -129,6 +134,7 @@ if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.ser
   }
   function findTopic(q){
     const s=q.toLowerCase().trim();
+    if(/volunteer|fuel|donat|cash.?app|call taker|poll advocate/.test(s))return "volunteer";
     if(/ride|transport|pickup|car|jotform|lift/.test(s))return "ride";
     if(/disab|access|wheelchair|hearing|blind|mobility|assistive/.test(s))return "access";
     if(/absentee|mail|early|away|overseas/.test(s))return "absentee";
